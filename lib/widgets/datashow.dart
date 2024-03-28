@@ -5,12 +5,14 @@ class DataShow extends StatefulWidget {
   final dynamic city;
   final dynamic name;
   final dynamic country;
+  final dynamic namecamp;
 
   const DataShow({
     super.key,
     required this.city,
     required this.name,
     required this.country,
+    required this.namecamp,
   });
 
   @override
@@ -94,7 +96,7 @@ class DataShowDesign extends State<DataShow> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Ciudad: ",
+                widget.namecamp + ": ",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   color: const Color.fromRGBO(137, 171, 180, 1),

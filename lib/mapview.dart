@@ -33,6 +33,7 @@ class MapView extends StatefulWidget {
 class MapViewDesign extends State<MapView> {
   // Variables
   String? city;
+  String? nameCamp = "Ciudad";
   String? country;
 
   // Métodos
@@ -55,6 +56,34 @@ class MapViewDesign extends State<MapView> {
       final jsonData = json.decode(response.body);
       setState(() {
         city = jsonData['address']['city'];
+        if (jsonData['address']['city'] == null) {
+          city = jsonData['address']['county'];
+          nameCamp = "Condado";
+        } else if (jsonData['address']['county'] == null) {
+          city = jsonData['address']['district'];
+          nameCamp = "Distrito";
+        } else if (jsonData['address']['district'] == null) {
+          city = jsonData['address']['village'];
+          nameCamp = "Aldea";
+        } else if (jsonData['address']['village'] == null) {
+          city = jsonData['address']['state'];
+          nameCamp = "Estado";
+        } else if (jsonData['address']['state'] == null) {
+          city = jsonData['address']['town'];
+          nameCamp = "Pueblo";
+        } else if (jsonData['address']['town'] == null) {
+          city = jsonData['address']['province'];
+          nameCamp = "Provincia";
+        } else if (jsonData['address']['province'] == null) {
+          city = jsonData['address']['hamlet'];
+          nameCamp = "Aldea";
+        } else if (jsonData['address']['hamlet'] == null) {
+          city = jsonData['address']['suburb'];
+          nameCamp = "Suburbio";
+        } else if (jsonData['address']['suburb'] == null) {
+          city = jsonData['address']['subdistrict'];
+          nameCamp = "Subdistrito";
+        }
         country = jsonData['address']['country'];
       });
     } else {
@@ -109,6 +138,7 @@ class MapViewDesign extends State<MapView> {
                             builder: (BuildContext context) {
                               return DataShow(
                                   city: city,
+                                  namecamp: nameCamp,
                                   name: widget.name,
                                   country: country);
                             });
