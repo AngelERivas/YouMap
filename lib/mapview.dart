@@ -1,11 +1,14 @@
 // Imports de Flutter y Extensiones
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter_map/flutter_map.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Imports de Designs Hechos por Mi
 import 'package:youmap/widgets/bar.dart';
+import 'package:youmap/widgets/datashow.dart';
 
 // Imports de Vistas
 import 'package:youmap/main.dart';
@@ -28,15 +31,35 @@ class MapView extends StatefulWidget {
 }
 
 class MapViewDesign extends State<MapView> {
+  // Variables
+  String? city;
+  String? country;
+
   // Métodos
   @override
   void initState() {
     super.initState();
+    getMarkerData();
   }
 
   @override
   void dispose() {
     super.dispose();
+  }
+
+  Future<void> getMarkerData() async {
+    final url =
+        'https://nominatim.openstreetmap.org/reverse?format=json&lat=${widget.latitude}&lon=${widget.longitude}';
+    final response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      final jsonData = json.decode(response.body);
+      setState(() {
+        city = jsonData['address']['city'];
+        country = jsonData['address']['country'];
+      });
+    } else {
+      throw Exception("Error Encontrando la Ubicación");
+    }
   }
 
   @override
@@ -79,9 +102,21 @@ class MapViewDesign extends State<MapView> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Icon(
-                      FontAwesomeIcons.locationDot,
-                      color: Color.fromRGBO(0, 0, 0, 1),
+                    GestureDetector(
+                      onTap: () {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return DataShow(
+                                  city: city,
+                                  name: widget.name,
+                                  country: country);
+                            });
+                      },
+                      child: const Icon(
+                        FontAwesomeIcons.locationDot,
+                        color: Color.fromRGBO(0, 0, 0, 1),
+                      ),
                     ),
                   ],
                 ),
