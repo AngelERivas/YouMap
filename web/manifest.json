@@ -1,6 +1,6 @@
 {
-    "name": "youmap",
-    "short_name": "youmap",
+    "name": "YouMap",
+    "short_name": "YouMap",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
