@@ -32,7 +32,7 @@ class MapView extends StatefulWidget {
 
 class MapViewDesign extends State<MapView> {
   // Variables
-  String? city;
+  late String city;
   String? nameCamp = "Ciudad";
   String? country;
 
@@ -55,36 +55,58 @@ class MapViewDesign extends State<MapView> {
     if (response.statusCode == 200) {
       final jsonData = json.decode(response.body);
       setState(() {
-        city = jsonData['address']['city'];
-        if (jsonData['address']['city'] == null) {
+        country = jsonData['address']['country'];
+        if (jsonData['address']['city'] != null) {
+          city = jsonData['address']['city'];
+          return;
+        } else if (jsonData['address']['city'] == null) {
+          if (jsonData['address']['county'] == null) {
+            if (jsonData['address']['district'] == null) {
+              if (jsonData['address']['village'] == null) {
+                if (jsonData['address']['state'] == null) {
+                  if (jsonData['address']['town'] == null) {
+                    if (jsonData['address']['province'] == null) {
+                      if (jsonData['address']['hamlet'] == null) {
+                        if (jsonData['address']['suburb'] == null) {
+                          city = jsonData['address']['subdistrict'];
+                          nameCamp = "Subdistrito";
+                          return;
+                        }
+                        city = jsonData['address']['suburb'];
+                        nameCamp = "Suburbio";
+                        return;
+                      }
+                      city = jsonData['address']['hamlet'];
+                      nameCamp = "Aldea";
+                      return;
+                    }
+                    city = jsonData['address']['province'];
+                    nameCamp = "Provincia";
+                    return;
+                  }
+                  city = jsonData['address']['town'];
+                  nameCamp = "Pueblo";
+                  return;
+                }
+                city = jsonData['address']['state'];
+                nameCamp = "Estado";
+                return;
+              }
+              city = jsonData['address']['village'];
+              nameCamp = "Aldea";
+              return;
+            }
+            city = jsonData['address']['district'];
+            nameCamp = "Distrito";
+            return;
+          }
           city = jsonData['address']['county'];
           nameCamp = "Condado";
-        } else if (jsonData['address']['county'] == null) {
-          city = jsonData['address']['district'];
-          nameCamp = "Distrito";
-        } else if (jsonData['address']['district'] == null) {
-          city = jsonData['address']['village'];
-          nameCamp = "Aldea";
-        } else if (jsonData['address']['village'] == null) {
-          city = jsonData['address']['state'];
-          nameCamp = "Estado";
-        } else if (jsonData['address']['state'] == null) {
-          city = jsonData['address']['town'];
-          nameCamp = "Pueblo";
-        } else if (jsonData['address']['town'] == null) {
-          city = jsonData['address']['province'];
-          nameCamp = "Provincia";
-        } else if (jsonData['address']['province'] == null) {
-          city = jsonData['address']['hamlet'];
-          nameCamp = "Aldea";
-        } else if (jsonData['address']['hamlet'] == null) {
-          city = jsonData['address']['suburb'];
-          nameCamp = "Suburbio";
-        } else if (jsonData['address']['suburb'] == null) {
-          city = jsonData['address']['subdistrict'];
-          nameCamp = "Subdistrito";
+          return;
+        } else {
+          city = "";
+          nameCamp = "";
         }
-        country = jsonData['address']['country'];
       });
     } else {
       throw Exception("Error Encontrando la Ubicación");

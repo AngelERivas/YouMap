@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class DataShow extends StatefulWidget {
-  final dynamic city;
+  final String city;
   final dynamic name;
   final dynamic country;
   final dynamic namecamp;
