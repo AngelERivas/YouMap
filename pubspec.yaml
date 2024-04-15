@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   # Map Dependencies
+  flutter_map_cancellable_tile_provider: ^2.0.0
   flutter_map: ^6.1.0
   latlong2: ^0.9.0
   # Icons Dependencies
@@ -56,7 +57,14 @@ flutter_icons:
   windows:
     generate: true
     image_path: "assets/YouMap.png"
-    icon_size: 48 
+    icon_size: 48
+  web:
+    generate: true
+    image_path: "assets/YouMap.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/YouMap.png"
 
 # The following section is specific to Flutter packages.
 flutter:
