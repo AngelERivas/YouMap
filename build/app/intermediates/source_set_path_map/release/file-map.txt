@@ -1,0 +1,12 @@
+com.example.youmap.app-jetified-window-1.0.0-beta04-0 C:\Users\Angel Rivas\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\res
+com.example.youmap.app-jetified-window-java-1.0.0-beta04-1 C:\Users\Angel Rivas\.gradle\caches\transforms-3\142c24f2530665bb6deb4123ab140714\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.youmap.app-core-1.6.0-2 C:\Users\Angel Rivas\.gradle\caches\transforms-3\2579a7de00054bf46a8dbc332552f622\transformed\core-1.6.0\res
+com.example.youmap.app-jetified-annotation-experimental-1.1.0-3 C:\Users\Angel Rivas\.gradle\caches\transforms-3\3f96ca76068ab400b494bc7d541ee256\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.youmap.app-main-4 C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\res
+com.example.youmap.app-release-5 C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\release\res
+com.example.youmap.app-pngs-6 C:\Users\Angel Rivas\source\repos\YouMap\build\app\generated\res\pngs\release
+com.example.youmap.app-resValues-7 C:\Users\Angel Rivas\source\repos\YouMap\build\app\generated\res\resValues\release
+com.example.youmap.app-rs-8 C:\Users\Angel Rivas\source\repos\YouMap\build\app\generated\res\rs\release
+com.example.youmap.app-mergeReleaseResources-9 C:\Users\Angel Rivas\source\repos\YouMap\build\app\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.youmap.app-mergeReleaseResources-10 C:\Users\Angel Rivas\source\repos\YouMap\build\app\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.youmap.app-merged_res-11 C:\Users\Angel Rivas\source\repos\YouMap\build\app\intermediates\merged_res\release

@@ -1,0 +1,15 @@
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/icudtl.dat
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/flutter_windows.dll
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/AssetManifest.bin
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/AssetManifest.json
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/assets/YouMap.png
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/FontManifest.json
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/NOTICES.Z
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/packages/flutter_map/lib/assets/flutter_map_logo.png
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/flutter_assets/shaders/ink_sparkle.frag
+C:/Users/Angel Rivas/source/repos/YouMap/build/windows/x64/runner/Release/data/app.so

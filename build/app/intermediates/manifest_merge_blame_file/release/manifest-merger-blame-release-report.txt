@@ -1,0 +1,112 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.youmap"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:2:5-66
+11-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:2:22-64
+12    <!--
+13         Required to query activities that can process text, see:
+14         https://developer.android.com/training/package-visibility?hl=en and
+15         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+16
+17         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+18    -->
+19    <queries>
+19-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:39:5-44:15
+20        <intent>
+20-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:40:9-43:18
+21            <action android:name="android.intent.action.PROCESS_TEXT" />
+21-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:41:13-72
+21-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:41:21-70
+22
+23            <data android:mimeType="text/plain" />
+23-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:42:13-50
+23-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:42:19-48
+24        </intent>
+25    </queries>
+26
+27    <application
+28        android:name="android.app.Application"
+28-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:5:9-42
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.6.0] C:\Users\Angel Rivas\.gradle\caches\transforms-3\2579a7de00054bf46a8dbc332552f622\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:6:9-43
+31        android:label="YouMap" >
+31-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:4:9-31
+32        <activity
+32-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:7:9-27:20
+33            android:name="com.example.youmap.MainActivity"
+33-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:8:13-41
+34            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+34-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:12:13-163
+35            android:exported="true"
+35-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:9:13-36
+36            android:hardwareAccelerated="true"
+36-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:13:13-47
+37            android:launchMode="singleTop"
+37-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:10:13-43
+38            android:theme="@style/LaunchTheme"
+38-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:11:13-47
+39            android:windowSoftInputMode="adjustResize" >
+39-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:14:13-55
+40
+41            <!--
+42                 Specifies an Android theme to apply to this Activity as soon as
+43                 the Android process has started. This theme is visible to the user
+44                 while the Flutter UI initializes. After that, this theme continues
+45                 to determine the Window background behind the Flutter UI.
+46            -->
+47            <meta-data
+47-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:19:13-22:17
+48                android:name="io.flutter.embedding.android.NormalTheme"
+48-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:20:15-70
+49                android:resource="@style/NormalTheme" />
+49-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:21:15-52
+50
+51            <intent-filter>
+51-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:23:13-26:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:24:17-68
+52-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:24:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:25:17-76
+54-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:25:27-74
+55            </intent-filter>
+56        </activity>
+57        <!--
+58             Don't delete the meta-data below.
+59             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+60        -->
+61        <meta-data
+61-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:30:9-32:33
+62            android:name="flutterEmbedding"
+62-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:31:13-44
+63            android:value="2" />
+63-->C:\Users\Angel Rivas\source\repos\YouMap\android\app\src\main\AndroidManifest.xml:32:13-30
+64
+65        <uses-library
+65-->[androidx.window:window:1.0.0-beta04] C:\Users\Angel Rivas\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+66            android:name="androidx.window.extensions"
+66-->[androidx.window:window:1.0.0-beta04] C:\Users\Angel Rivas\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+67            android:required="false" />
+67-->[androidx.window:window:1.0.0-beta04] C:\Users\Angel Rivas\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+68        <uses-library
+68-->[androidx.window:window:1.0.0-beta04] C:\Users\Angel Rivas\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+69            android:name="androidx.window.sidecar"
+69-->[androidx.window:window:1.0.0-beta04] C:\Users\Angel Rivas\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+70            android:required="false" />
+70-->[androidx.window:window:1.0.0-beta04] C:\Users\Angel Rivas\.gradle\caches\transforms-3\032f4dff274e516110d9363a9793a3e3\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+71    </application>
+72
+73</manifest>
